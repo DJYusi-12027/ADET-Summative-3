@@ -26,8 +26,8 @@
     } else if (isset($_GET['task']) && $_GET['task'] === $toDelete)
 	{
       echo '<div class="alert alert-warning"><b>Are you sure you want to delete </b>"' . $toDelete . '"<b>?</b>';
-      echo '<a href="todo.php?confirm=true&task=' . $toDelete . '" class="btn btn-danger ml-2">Yes</a>';
-      echo '<a href="todo.php" class="btn btn-secondary ml-2">No</a></div>';
+      echo '<a href="index.php?confirm=true&task=' . $toDelete . '" class="btn btn-danger ml-2">Yes</a>';
+      echo '<a href="index.php" class="btn btn-secondary ml-2">No</a></div>';
     }
     return $todoList;
   }
@@ -194,7 +194,7 @@
         <?php
           foreach ($todoList as $task) {
             echo '<div class="d-flex p-2 bd-highlight w-100 justify-content-between"> <li class="list-group-item w-100">' . $task . '
-                </li><a href="todo.php?delete=true&task=' . $task . '" class="btn btn-danger">Delete</a><a href="todo.php?markDone=true&task=' . $task . '" class="btn btn-success">Mark Done</a></div>';
+                </li><a href="index.php?delete=true&task=' . $task . '" class="btn btn-danger">Delete</a><a href="index.php?markDone=true&task=' . $task . '" class="btn btn-success">Mark Done</a></div>';
           }
         ?>
       </ul>
